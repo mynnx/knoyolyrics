@@ -1,14 +1,3 @@
-var lyricLines = [
-    {lyric: "Now, this is the story all about how", missingWord: 4},
-    {lyric: "My life got flipped-turned upside down", missingWord: 3},
-    {lyric: "And I'd like to take a minute, just sit right there", missingWord: 6},
-    {lyric: "I'll tell you how I became the prince of a town called Bel Air", missingWord: 7},
-    {lyric: "In West Philadelphia, born and raised", missingWord: 2},
-    {lyric: "On the playground is where I spent most of my days", missingWord: 2},
-    {lyric: "Chillin' out, maxin', relaxin' all cool", missingWord: 0},
-    {lyric: "And all shootin' some B-ball outside of the school", missingWord: 4},
-];
-
 var LyricList = React.createClass({
     getInitialState: function() {
         return { score: 0 };
