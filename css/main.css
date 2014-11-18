@@ -69,14 +69,14 @@ header {
     color: green;
 }
 
-.score {
+#score {
     position: absolute;
     bottom: 20px;
     right: 20px;
     font-size: 4em;
 }
 
-.score::first-letter {
+#score::first-letter {
     color: red;
 }
 

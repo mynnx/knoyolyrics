@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/react/react.js"></script>
+        <script src="js/vendor/react/JSXTransformer.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -38,23 +40,13 @@
             </div>
         </header>
 
-        <div class="container">
-            <p class="lyric-line">Now, this is a <span class="answer-wrong">lesson</span> <span class="answer-correction">story</span> all about how</p>
-            <p class="lyric-line">My life got <span class="answer-right">flipped</span>-turned upside down</p>
-            <p class="lyric-line">And I'd like to take a <input type="text" size="6"></input></p>
-            <p class="lyric-line">Just sit <input type="text" size="5"></input> there</p>
-            <p class="lyric-line">I'll tell you how I became the <input type="text" size="6"></input> of a town called Bel Air</p>
-        </div>
+        <div id="example" class="container"></div>
 
-        <div class="score">
-            1 / 10
-        </div>
+        <div id="score"> </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/components/backbone/backbone.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script type="text/jsx" src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
