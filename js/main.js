@@ -61,7 +61,7 @@ var LyricPrompt = React.createClass({
 
     render: function() {
         if (!this.props.wordGuessed) {
-            return (<input type="text" size={this.props.word.length} onBlur={this.handleBlur} ref="prompt"></input>);
+            return (<input type="text" size={this.props.word.length + 2} onBlur={this.handleBlur} ref="prompt"></input>);
         } else if (compareWords(this.props.wordGuessed, this.props.word)) {
             return (<span className="answer-right">{this.props.word}</span>);
         } else {
