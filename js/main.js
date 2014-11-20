@@ -82,7 +82,7 @@ var ScoreCard = React.createClass({
 
 var compareWords = function(word1, word2) {
     word1 = word1.toLowerCase().replace(/[^a-zA-Z ]/g, "");
-    word2 = word1.toLowerCase().replace(/[^a-zA-Z ]/g, "");
+    word2 = word2.toLowerCase().replace(/[^a-zA-Z ]/g, "");
     return word1 == word2;
 }
 
