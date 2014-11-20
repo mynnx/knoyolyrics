@@ -33,7 +33,7 @@ var LyricLine = React.createClass({
 
     isCorrect: function(value) {
         var correctAnswer = this.props.lyric.split(" ")[this.props.missingWord];
-        return (value == correctAnswer);
+        return (compareWords(value, correctAnswer));
     },
 
     render: function() {
@@ -62,7 +62,7 @@ var LyricPrompt = React.createClass({
     render: function() {
         if (!this.props.wordGuessed) {
             return (<input type="text" size={this.props.word.length} onBlur={this.handleBlur} ref="prompt"></input>);
-        } else if (this.props.wordGuessed == this.props.word) {
+        } else if (compareWords(this.props.wordGuessed, this.props.word)) {
             return (<span className="answer-right">{this.props.word}</span>);
         } else {
             return (
@@ -80,6 +80,11 @@ var ScoreCard = React.createClass({
     }
 });
 
+var compareWords = function(word1, word2) {
+    word1 = word1.toLowerCase().replace(/[^a-zA-Z ]/g, "");
+    word2 = word1.toLowerCase().replace(/[^a-zA-Z ]/g, "");
+    return word1 == word2;
+}
 
 React.render(
   <LyricList lyricLines={lyrics} />,
