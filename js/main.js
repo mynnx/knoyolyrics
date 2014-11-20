@@ -15,7 +15,7 @@ var LyricList = React.createClass({
                            updateScore={this.updateScore}/>
             );
         }.bind(this));
-        return ( <div> {lyricNodes} <ScoreCard score={this.state.score} /> </div> );
+        return ( <div> {lyricNodes} <ScoreCard score={this.state.score} maxScore={this.props.lyricLines.length} /> </div> );
     }
 });
 
@@ -76,7 +76,7 @@ var LyricPrompt = React.createClass({
 
 var ScoreCard = React.createClass({
     render: function() {
-        return ( <div id="score"> {this.props.score} / 10 </div> );
+        return ( <div id="score"> {this.props.score} / {this.props.maxScore} </div> );
     }
 });
 
